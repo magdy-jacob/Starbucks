@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <section>
+        <header>
+            <nav class="navbar navbar-expand-sm pt-md-5 pb-5 pt-sm-0  sticky-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#"><img class="logo" src="image/logo.png" alt="logo"></a>
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto text-center">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">about</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="content ">
+            <div class="container">
+                <div class="row">
+                    <div class="textbox col-sm-12 col-md-6 col-lg-6">
+                        <h2>It`s not just coffee<br>It`s<span> Starbucks</span></h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolor recusandae eius deserunt, facilis distinctio voluptas</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div class="imgbox col-sm-12 col-md-6 col-lg-6 ms-auto">
+                        <img src="image/img1.png" class="starbucks">
+                    </div>
+                </div>
+                <ul class="thumb">
+                    <li><img src="image/thumb1.png" onclick="imgslider('image/img1.png');changeColor('#017143')"></li>
+                    <li><img src="image/thumb2.png" onclick="imgslider('image/img2.png');changeColor('#eb7495')"></li>
+                    <li><img src="image/thumb3.png" onclick="imgslider('image/img3.png');changeColor('#d752b1')"></li>
+                </ul>
+                <ul class="sci">
+                    <li><a href="#"><img src="image/facebook.png" alt="facebook"></a></li>
+                    <li><a href="#"><img src="image/twitter.png" alt="twitter"></a></li>
+                    <li><a href="#"><img src="image/instagram.png" alt="instagram"></a></li>
+                </ul>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        function imgslider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+        function changeColor(color){
+            const circle = document.querySelector('.circle');
+            const colorText = document.querySelector('.content .textbox a');
+            const colorTex = document.querySelector('.content .textbox span');
+            colorText.style.background = color;
+            colorTex.style.color = color;
+            circle.style.background = color;
+        }
+        let marker = document.querySelector('#indicater');
+        let nav = document.querySelector('nav');
+        let item = document.querySelectorAll('nav a');
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

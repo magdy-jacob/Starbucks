@@ -1,0 +1,217 @@
+@import url('https//font.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Poppins',sans-serif;
+}
+html{
+    font-size: 40%;
+}
+.navbar .navbar-brand img{
+    width: clamp(8rem , 100% , 10rem);
+}
+.navbar .navbar-nav .nav-link{
+    color: #017143;
+    text-decoration: none;
+    font-size: 2.2rem;
+    height: 5rem;
+    z-index: 2;
+    margin: 0 3rem;
+    font-weight: 600;
+}
+.navbar .navbar-nav .nav-link.active{
+    color: #00a621;
+}
+.navbar .navbar-toggler{
+    font-size: 2rem;
+}
+
+.content .textbox{
+    position: relative;
+    margin-top: 20rem;
+    
+}
+.content .textbox h2{
+    color: #333;
+    font-size: 7rem;
+    line-height: 9rem;
+    font-family: 500;
+}
+.content .textbox span{
+    color: #017143;
+    font-size: 10rem;
+    font-weight: bold;
+    transition: 0.7s;
+}
+.content .textbox p{
+    color: #333;
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+.content .textbox a{
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 2rem 3rem;
+    background: #017143;
+    border-radius: 4rem;
+    font-size: 1.7rem;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: .1rem;
+    transition: 0.7s;
+}
+.content .textbox a:hover{
+    transform: scale(1.2rem);
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+}
+.content .imgbox{
+    width: 45rem;
+    margin: 5rem ;
+    transition: 0.7s;
+}
+.content .imgbox img{
+    width: 100%;
+}
+.content .imgbox .starbucks{
+    transition: 0.7s;
+}
+.thumb{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 40rem;
+}
+.thumb li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 2rem;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+.thumb li:hover{
+    transform: translateY(-25px);
+}
+.thumb li img{
+    width: clamp(5rem, 80% , 999rem);
+}
+.sci{
+    position: absolute;
+    top: 50%;
+    right: 3rem;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.sci li{
+    list-style: none;
+}
+.sci li a{
+    display: inline-block;
+    margin: 5px;
+    transform: scale(0.6);
+    filter: invert(0.3);
+    transition: 0.7s;
+}
+.sci li a:hover{
+    transform: scale(1);
+    filter: invert(1);
+}
+.circle{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    transition: 0.5s;
+    clip-path: circle(600px at right 900px);
+    z-index: -1;
+}
+@media (768px <= width <= 1439px) {
+    html{
+        font-size: 35%;
+    }
+}
+@media (min-width:426px) and (max-width:767px){
+    html{
+        font-size: 20%;
+    }
+    .circle{
+        width: 100%;
+        height: 100%;
+    }
+    .content .imgbox{
+        width: clamp(20rem , 50% ,65rem);
+        margin-right: rem;
+    }
+    .content .textbox {
+        text-align: center;
+    }
+    .content .textbox h2{
+        font-size: clamp(2rem , 6vw, 14rem);
+        margin-bottom: clamp(2rem , 100%, 7rem);
+        line-height: clamp(11rem , 120%, 20rem);
+    }
+    .content .textbox span{
+        font-size: clamp(6rem , 8vw, 16rem);
+    }
+    .content .textbox p{
+        font-size: clamp(2rem , 2vw ,3rem);
+        margin-bottom: clamp(2rem , 100%, 3rem)
+    }
+    .content .textbox a{
+        font-size: clamp(2rem , 2vw ,3rem);
+        margin-bottom: clamp(2rem , 100%, 3rem)
+    }
+}
+@media (width <= 426px) {
+    html{
+        font-size: 30%;
+        margin: 0 2rem;
+        height: 100vh;
+        /* overflow-y: hidden; */
+    }
+    .circle{
+        margin-bottom: -20rem;
+        width: 100%;
+        height: 100%;
+    }
+    .content .textbox {
+        text-align: center;
+        margin: 8rem 0;
+    }
+    .content .textbox h2{
+        font-size: clamp(5rem , 10vw ,8rem);
+        line-height: 11rem;
+    }
+    .content .textbox span{
+        font-size: clamp(7rem , 10vw ,10rem);
+    }
+    .content .textbox p{
+        padding: clamp(1rem , 3vw ,2rem);
+    }
+    .sci{
+        position: absolute;
+        top: 70%;
+        right:80%;
+    }
+    .content .imgbox{
+        width: clamp(20rem , 45vw ,40rem);
+        margin: -5rem 1rem;
+    }
+    .thumb{
+        left: 10%;
+        bottom: -15%;
+        transform: translateX(-10%);
+    }
+}
